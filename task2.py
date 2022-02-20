@@ -41,10 +41,11 @@ def to_normal_form(arr):
 
     normal_form = []
 
-    for word in arr:
+    for i, word in enumerate(arr):
         p = morph.parse(word)[0]
         word_in_normal_form = p.normal_form
         normal_form.append(word_in_normal_form)
+        print(f"Done file {i}")
 
     return normal_form
 
